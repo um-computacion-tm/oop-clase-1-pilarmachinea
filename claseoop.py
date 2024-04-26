@@ -14,35 +14,35 @@
 
 class Profesor:
     def __init__(self, el_nombre, el_email):
-        self.nombre = el_nombre
-        self.email = el_email
+        self.__nombre__ = el_nombre
+        self.__email__ = el_email
 
 #metodo adentro de una clase, esto devuelve el nombre 
     def dame_tu_nombre(self):
-        return self.nombre
+        return self.__nombre__
 
 
 class Alumno:
     def __init__(self, el_nombre_del_alumno):
-        self.nobmre = el_nombre_del_alumno
-        self.inasistencia = 0
-        self.dieta = ""
-        self.mentor = None
+        self.__nobmre__ = el_nombre_del_alumno
+        self.__inasistencia__ = 0
+        self.__dieta__ = ""
+        self.__mentor__ = None
 
     def mentoria(self, profesor):
-        self.mentor = profesor  
+        self.__mentor__ = profesor  
 
     def falta(self):
-        self.inasistencia +=1
+        self.__inasistencia__ +=1
 
     def elegir_dieta_especial(self, la_dieta):
-        self.dieta =la_dieta 
+        self.__dieta__ =la_dieta 
 
     def es_vegano(self):
-        self.dieta = "vegano"
+        self.__dieta__ = "vegano"
 
     def esta_libre(self):
-        if self.inasistencia >= 5:
+        if self.__inasistencia__ >= 5:
             return "Esta libre"
         else:
             return "Ok"
